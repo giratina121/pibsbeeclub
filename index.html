@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pibsbee Club | Handmade Pibble Bee Hair Clips</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        honey: {
+                            50: '#fcfaf2',
+                            100: '#f7f0dc',
+                            200: '#eddcb7',
+                            300: '#e1c285',
+                            400: '#d4a353',
+                            500: '#c28b32',
+                            600: '#a36d24',
+                            700: '#82521c',
+                            800: '#6b421a',
+                            900: '#583618',
+                        },
+                        ambercream: '#FFFBEB',
+                        warmbrown: '#38220F',
+                        softpeach: '#FFF2E5',
+                        beeellow: '#FEE180'
+                    },
+                    fontFamily: {
+                        sans: ['Quicksand', 'sans-serif'],
+                        display: ['Fredoka', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #fcfaf2;
+            color: #38220F;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Fredoka', sans-serif;
+        }
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f7f0dc;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d4a353;
+            border-radius: 5px;
+        }
+        .honeycomb-pattern {
+            background-image: radial-gradient(#eddcb7 1px, transparent 1px), radial-gradient(#eddcb7 1px, #fcfaf2 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(3deg); }
+        }
+        .floating-bee {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-honey-50 text-warmbrown antialiased selection:bg-beeellow selection:text-warmbrown">
+
+    <!-- Announcement Bar -->
+    <div class="bg-honey-400 text-warmbrown text-xs sm:text-sm font-medium py-2 px-4 text-center tracking-wide flex items-center justify-center gap-2 shadow-inner">
+        <span>🐝 Free US Shipping on orders over $35! Each clip comes in eco-kraft packaging (95mm x 125mm). 🍯</span>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-honey-50/90 backdrop-blur-md border-b border-honey-200 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-12 h-12 rounded-2xl bg-beeellow border-2 border-honey-500 shadow-md flex items-center justify-center text-2xl group-hover:rotate-12 transition-transform">
+                    🐝
+                </div>
+                <div>
+                    <span class="text-2xl sm:text-3xl font-display font-bold tracking-tight text-warmbrown">Pibsbee Club</span>
+                    <span class="block text-xs text-honey-700 font-semibold uppercase tracking-widest">Handmade 5cm Hair Clips</span>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex items-center gap-8 font-semibold text-warmbrown/90">
+                <a href="#shop" class="hover:text-honey-600 transition-colors">The Hive Shop</a>
+                <a href="#specs" class="hover:text-honey-600 transition-colors">Packaging Specs</a>
+                <a href="#story" class="hover:text-honey-600 transition-colors">Our Story</a>
+                <a href="#reviews" class="hover:text-honey-600 transition-colors">Buzz Reviews</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <button onclick="toggleCart()" class="relative bg-beeellow hover:bg-honey-400 text-warmbrown font-display font-bold px-4 py-2.5 rounded-2xl border-2 border-honey-500 shadow-sm flex items-center gap-2 transition-all transform active:scale-95">
+                    <i class="fa-solid fa-basket-shopping text-honey-800"></i>
+                    <span class="hidden sm:inline">Hive Bag</span>
+                    <span id="cart-badge" class="bg-warmbrown text-honey-50 text-xs px-2 py-0.5 rounded-full font-sans font-bold">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden honeycomb-pattern py-16 sm:py-24 border-b border-honey-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-honey-200/80 border border-honey-400/50 px-4 py-1.5 rounded-full text-honey-800 text-sm font-semibold shadow-sm">
+                        <span>🍯</span> Handcrafted 5cm Hairclip on Custom Kraft Packaging <span>✨</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-6xl font-display font-extrabold text-warmbrown leading-tight">
+                        Meet the Cutest <span class="text-honey-600 underline decoration-beeellow decoration-wavy">Pibble Bee</span> Accessories!
+                    </h1>
+                    <p class="text-lg sm:text-xl text-warmbrown/80 font-medium leading-relaxed">
+                        Featuring our signature 5cm snap hair clip mounted on custom spool-shaped honey kraft packaging (95mm x 125mm). Guaranteed to make any hairstyle un-bee-lievably adorable.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#shop" class="w-full sm:w-auto bg-warmbrown hover:bg-honey-800 text-honey-50 font-display font-bold text-lg px-8 py-4 rounded-2xl shadow-xl transition-all text-center">
+                            Shop The Collection 🐝
+                        </a>
+                        <a href="#specs" class="w-full sm:w-auto bg-honey-200 hover:bg-honey-300 text-warmbrown font-display font-bold text-lg px-6 py-4 rounded-2xl border border-honey-300 transition-all text-center">
+                            View Packaging Specs
+                        </a>
+                    </div>
+                </div>
+
+                <div class="relative flex justify-center">
+                    <div class="relative bg-white/80 backdrop-blur-md p-6 rounded-3xl border-2 border-honey-200 shadow-2xl max-w-md w-full floating-bee">
+                        <div class="relative overflow-hidden rounded-2xl bg-honey-100 aspect-square group">
+                            <img src="https://placehold.co/600x600/FEE180/38220F?text=Pibble+Bee+Hair+Clip" alt="Pibble Bee Hair Clip" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-warmbrown text-honey-50 text-xs font-bold px-3 py-1 rounded-full shadow-md uppercase tracking-wider">5cm Clip 🍯</span>
+                        </div>
+                        <div class="mt-5 space-y-2">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="font-display font-bold text-xl text-warmbrown">Original Pibble Bee Clip</h3>
+                                    <p class="text-sm text-honey-700 font-medium">On 95mm x 125mm Kraft Card</p>
+                                </div>
+                                <span class="font-display font-bold text-2xl text-honey-800">$18.50</span>
+                            </div>
+                            <button onclick="quickAdd('Original Pibble Bee Clip', 18.50, 'https://placehold.co/600x600/FEE180/38220F?text=Pibble+Bee+Hair+Clip')" class="w-full mt-3 bg-beeellow hover:bg-honey-400 text-warmbrown font-display font-bold py-3 rounded-xl border border-honey-500 shadow-sm transition-all flex items-center justify-center gap-2">
+                                <i class="fa-solid fa-cart-plus"></i> Add to Hive Bag
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packaging Specs Section -->
+    <section id="specs" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <span class="text-honey-700 font-display font-bold uppercase tracking-wider text-sm bg-honey-200 px-4 py-1 rounded-full">Precision Dimensions</span>
+            <h2 class="text-3xl sm:text-5xl font-display font-bold text-warmbrown">Packaging & Hairclip Specifications</h2>
+            <p class="text-warmbrown/80 font-medium">Designed with precision spool-shaped die-cut kraft cardboard for an unboxing experience like no other.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl border-2 border-honey-200 shadow-lg text-center space-y-4">
+                <div class="w-16 h-16 bg-honey-200 rounded-2xl mx-auto flex items-center justify-center text-3xl font-bold text-honey-800">📏</div>
+                <h3 class="font-display font-bold text-xl text-warmbrown">Cardboard Packaging</h3>
+                <p class="text-2xl font-display font-extrabold text-honey-800">95mm × 125mm</p>
+                <p class="text-sm text-warmbrown/70">Spool-shaped sustainable kraft card featuring the Pibsbee Club logo and honeybee graphics.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border-2 border-honey-200 shadow-lg text-center space-y-4">
+                <div class="w-16 h-16 bg-beeellow rounded-2xl mx-auto flex items-center justify-center text-3xl font-bold text-warmbrown">💇🏽‍♀️</div>
+                <h3 class="font-display font-bold text-xl text-warmbrown">Snap Hair Clip</h3>
+                <p class="text-2xl font-display font-extrabold text-honey-800">5.0 cm Length</p>
+                <p class="text-sm text-warmbrown/70">Durable black matte metal snap clip securely tied to the card with natural twine.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border-2 border-honey-200 shadow-lg text-center space-y-4">
+                <div class="w-16 h-16 bg-honey-300 rounded-2xl mx-auto flex items-center justify-center text-3xl font-bold text-warmbrown">🏷️</div>
+                <h3 class="font-display font-bold text-xl text-warmbrown">Logo & Hang Details</h3>
+                <p class="text-2xl font-display font-extrabold text-honey-800">6mm Hole</p>
+                <p class="text-sm text-warmbrown/70">Top hanging notch with a 15mm high logo panel and 20mm bee graphic emblem.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shop Section -->
+    <section id="shop" class="bg-honey-100/70 py-20 border-y border-honey-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-honey-700 font-display font-bold uppercase tracking-wider text-sm bg-honey-200 px-4 py-1 rounded-full">The Hive Catalog</span>
+                <h2 class="text-3xl sm:text-5xl font-display font-bold text-warmbrown">Choose Your Pibble Bee</h2>
+                <p class="text-warmbrown/80 font-medium">Each clip arrives mounted on our custom 95x125mm kraft presentation card.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-3xl border-2 border-honey-200 shadow-lg overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square bg-honey-100">
+                            <img src="https://placehold.co/600x600/FEE180/38220F?text=Original+Pibble+Bee" alt="Original Pibble Bee" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-honey-400 text-warmbrown text-xs font-bold px-3 py-1 rounded-full shadow">Bestseller</span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-display font-bold text-xl text-warmbrown">Original Pibble Bee Clip (5cm)</h3>
+                            <p class="text-sm text-warmbrown/70">Flagship pibble face with fuzzy bee stripes and shimmer resin wings on kraft card.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between">
+                        <span class="font-display font-extrabold text-2xl text-honey-800">$18.50</span>
+                        <button onclick="quickAdd('Original Pibble Bee Clip (5cm)', 18.50, 'https://placehold.co/600x600/FEE180/38220F?text=Original+Pibble+Bee')" class="bg-beeellow hover:bg-honey-400 text-warmbrown font-display font-bold px-4 py-2.5 rounded-xl border border-honey-500 shadow-sm transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-3xl border-2 border-honey-200 shadow-lg overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square bg-honey-100">
+                            <img src="https://placehold.co/600x600/FFD166/38220F?text=Flower+Crown+Bee" alt="Flower Crown Pibble Bee" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-softpeach text-warmbrown text-xs font-bold px-3 py-1 rounded-full shadow">Spring Edition</span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-display font-bold text-xl text-warmbrown">Flower Crown Pibble Bee Clip</h3>
+                            <p class="text-sm text-warmbrown/70">Adorned with handmade miniature clay daisies and lavender blossoms.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between">
+                        <span class="font-display font-extrabold text-2xl text-honey-800">$20.00</span>
+                        <button onclick="quickAdd('Flower Crown Pibble Bee Clip', 20.00, 'https://placehold.co/600x600/FFD166/38220F?text=Flower+Crown+Bee')" class="bg-beeellow hover:bg-honey-400 text-warmbrown font-display font-bold px-4 py-2.5 rounded-xl border border-honey-500 shadow-sm transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-3xl border-2 border-honey-200 shadow-lg overflow-hidden flex flex-col justify-between">
+                    <div>
+                        <div class="relative overflow-hidden aspect-square bg-honey-100">
+                            <img src="https://placehold.co/600x600/E9C46A/38220F?text=Queen+Bee+Tiara" alt="Queen Bee Pibble Tiara" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-amber-200 text-warmbrown text-xs font-bold px-3 py-1 rounded-full shadow">Royal Drop</span>
+                        </div>
+                        <div class="p-6 space-y-2">
+                            <h3 class="font-display font-bold text-xl text-warmbrown">Queen Bee Pibble Tiara Clip</h3>
+                            <p class="text-sm text-warmbrown/70">Features a golden honeycomb crown with sparkly resin gemstones.</p>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0 flex items-center justify-between">
+                        <span class="font-display font-extrabold text-2xl text-honey-800">$22.00</span>
+                        <button onclick="quickAdd('Queen Bee Pibble Tiara Clip', 22.00, 'https://placehold.co/600x600/E9C46A/38220F?text=Queen+Bee+Tiara')" class="bg-beeellow hover:bg-honey-400 text-warmbrown font-display font-bold px-4 py-2.5 rounded-xl border border-honey-500 shadow-sm transition-all flex items-center gap-2">
+                            <i class="fa-solid fa-plus"></i> Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <span class="text-honey-700 font-display font-bold uppercase tracking-wider text-sm bg-honey-200 px-4 py-1 rounded-full">Hive Testimonials</span>
+            <h2 class="text-3xl sm:text-4xl font-display font-bold text-warmbrown">Loved by Over 5,000 Bee-Lievers</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl border-2 border-honey-200 shadow-md space-y-4">
+                <div class="flex text-amber-500 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-warmbrown/90 font-medium italic">"The packaging alone is gorgeous! The 95x125mm kraft card makes it look like a boutique collector's item. OBSESSED!"</p>
+                <h4 class="font-display font-bold text-sm text-warmbrown">- Sarah M.</h4>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border-2 border-honey-200 shadow-md space-y-4">
+                <div class="flex text-amber-500 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-warmbrown/90 font-medium italic">"The 5cm clip holds my thick hair all day without slipping. Such high quality and adorable design."</p>
+                <h4 class="font-display font-bold text-sm text-warmbrown">- Jessica D.</h4>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border-2 border-honey-200 shadow-md space-y-4">
+                <div class="flex text-amber-500 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p class="text-warmbrown/90 font-medium italic">"Bought as a gift for my pitbull-loving sister and she cried happy tears. 10/10!"</p>
+                <h4 class="font-display font-bold text-sm text-warmbrown">- Amanda L.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-warmbrown text-honey-100 pt-16 pb-12 border-t-4 border-honey-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-beeellow text-warmbrown flex items-center justify-center text-xl font-bold">🐝</div>
+                <span class="text-2xl font-display font-bold text-honey-50">Pibsbee Club</span>
+            </div>
+            <p class="text-sm text-honey-200/80">Handmade pibble & bee hair clips (5cm clip on 95x125mm kraft packaging).</p>
+            <p class="text-xs text-honey-300/60">&copy; 2026 Pibsbee Club. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Slide-over Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 overflow-hidden hidden">
+        <div class="absolute inset-0 bg-warmbrown/40 backdrop-blur-sm" onclick="toggleCart()"></div>
+        <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+            <div class="w-screen max-w-md bg-honey-50 shadow-2xl flex flex-col border-l border-honey-200">
+                <div class="p-6 bg-honey-100 border-b border-honey-200 flex items-center justify-between">
+                    <h2 class="font-display font-bold text-xl text-warmbrown">Your Hive Bag</h2>
+                    <button onclick="toggleCart()" class="text-warmbrown hover:text-honey-700 p-2"><i class="fa-solid fa-xmark text-xl"></i></button>
+                </div>
+                <div id="cart-items-container" class="flex-1 overflow-y-auto p-6 space-y-4"></div>
+                <div class="p-6 bg-honey-100 border-t border-honey-200 space-y-4">
+                    <div class="flex justify-between text-lg font-display font-bold text-warmbrown">
+                        <span>Total</span>
+                        <span id="cart-total" class="text-honey-800">$0.00</span>
+                    </div>
+                    <button onclick="alert('Order placed successfully! Thank you for supporting Pibsbee Club.'); toggleCart(); cart=[]; updateCartBadge();" class="w-full bg-warmbrown text-honey-50 font-display font-bold py-4 rounded-2xl shadow-lg">
+                        Proceed to Checkout 🐝
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        function toggleCart() {
+            document.getElementById('cart-drawer').classList.toggle('hidden');
+            renderCart();
+        }
+        function quickAdd(name, price, image) {
+            const item = cart.find(i => i.name === name);
+            if (item) item.qty += 1;
+            else cart.push({ name, price, image, qty: 1 });
+            updateCartBadge();
+            toggleCart();
+        }
+        function updateCartBadge() {
+            document.getElementById('cart-badge').textContent = cart.reduce((sum, i) => sum + i.qty, 0);
+        }
+        function renderCart() {
+            const container = document.getElementById('cart-items-container');
+            const totalEl = document.getElementById('cart-total');
+            if (cart.length === 0) {
+                container.innerHTML = `<p class="text-center text-warmbrown/70 py-12">Your Hive Bag is empty.</p>`;
+                totalEl.textContent = '$0.00';
+                return;
+            }
+            let total = 0;
+            container.innerHTML = cart.map(i => {
+                total += i.price * i.qty;
+                return `<div class="flex items-center gap-4 bg-white p-4 rounded-2xl border border-honey-200">
+                    <img src="${i.image}" class="w-14 h-14 rounded-xl object-cover bg-honey-100">
+                    <div class="flex-1"><h4 class="font-display font-bold text-sm text-warmbrown">${i.name}</h4><p class="text-xs text-honey-700">$${i.price.toFixed(2)} × ${i.qty}</p></div>
+                </div>`;
+            }).join('');
+            totalEl.textContent = `$${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>
